@@ -11,6 +11,8 @@ public class LinkedList<E> implements IList<E>
 {
     private Node<E> head;
 
+    private Node<E> tail;
+
 
     private int size;
 
@@ -18,6 +20,7 @@ public class LinkedList<E> implements IList<E>
     public LinkedList(E o)
     {
         this.head = new Node<>(o);
+        this.tail = head;
         this.size = 1;
     }
 
@@ -25,20 +28,26 @@ public class LinkedList<E> implements IList<E>
     public LinkedList()
     {
         this.head = null;
+        this.tail = null;
         this.size = 0;
     }
 
 
     public boolean add(E o)
     {
-        Node current = this.head;
-        while(current != null)
-        {
-            current = current.getNext();
-        }
         this.size++;
 
-        return false;
+        if(this.head == null)
+        {
+            this.head = new Node<E>(o);
+            this.tail = this.head;
+        }
+        else
+        {
+            this.tail.setNext(new Node<E>(o));
+            this.tail = this.tail.getNext();
+        }
+        return true;
     }
 
 
@@ -47,8 +56,9 @@ public class LinkedList<E> implements IList<E>
         Node current = this.head;
         while(current != null)
         {
-            if(current.equals(o))
+            if(current.getData().equals(o))
             {
+
                 return true;
             }
             current = current.getNext();
@@ -74,13 +84,19 @@ public class LinkedList<E> implements IList<E>
             if(count == index)
             {
                 if(previous == null)
-                    this.head = current;
-                previous.setNext(current.getNext());
+                {
+                    this.head = current.getNext();
+                }
+                else
+                {
+                    previous.setNext(current.getNext());
+                }
                 this.size--;
                 return current.getData();
             }
             previous = current;
             current = current.getNext();
+            count++;
         }
         return null;
     }
