@@ -6,6 +6,7 @@ package net.jrtechs.www.DataStructures;
 
 
 /**
+ * Class used for storing data in linked structures
  *
  * @param <E>
  */
