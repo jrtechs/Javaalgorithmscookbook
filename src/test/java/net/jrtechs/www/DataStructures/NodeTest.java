@@ -4,7 +4,6 @@ package net.jrtechs.www.DataStructures;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import net.jrtechs.www.DataStructures.LinkedList.LinkedList;
 import org.junit.Test;
 
 

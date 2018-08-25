@@ -1,4 +1,4 @@
-package net.jrtechs.www.DataStructures;
+package net.jrtechs.www.DataStructures.Lists.LinkedList;
 
 
 /**
@@ -45,6 +45,15 @@ public interface IList<E>
      * @return element which is removed
      */
     public E remove(int index);
+
+
+    /**
+     * Removes an element from the list
+     *
+     * @param o element to remove
+     * @return element which is removed
+     */
+    public E remove(E o);
 
 
     /**

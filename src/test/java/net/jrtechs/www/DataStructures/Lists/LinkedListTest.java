@@ -1,6 +1,7 @@
-package net.jrtechs.www.DataStructures.LinkedList;
+package net.jrtechs.www.DataStructures.Lists;
 
 
+import net.jrtechs.www.DataStructures.Lists.LinkedList.LinkedList;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -66,10 +67,10 @@ public class LinkedListTest
 
 
     /**
-     * Testing addition of data elements
+     * Testing deletion of data elements
      */
     @Test
-    public void testDeletion()
+    public void testDeletionByIndex()
     {
         LinkedList<Double> list = new LinkedList<>();
         list.add(12.0);
@@ -86,11 +87,35 @@ public class LinkedListTest
         list.remove(0);
         list.remove(1);
 
-
         assertFalse(list.contains(12.0));
         assertFalse(list.contains(44.9));
         assertTrue(list.contains(13.0));
     }
 
+    /**
+     * Tests linked deletion based on element
+     */
+    @Test
+    public void testDeletionByElement()
+    {
+        LinkedList<Double> list = new LinkedList<>();
+        list.add(12.0);
+        list.add(13.0);
+        list.add(44.9);
+
+        assertTrue(list.contains(44.9));
+        assertTrue(list.contains(12.0));
+        assertTrue(list.contains(13.0));
+
+        assertTrue(list.size() == 3);
+
+
+        list.remove(12.0);
+        list.remove(44.9);
+
+        assertFalse(list.contains(12.0));
+        assertFalse(list.contains(44.9));
+        assertTrue(list.contains(13.0));
+    }
 
 }
