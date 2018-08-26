@@ -165,6 +165,50 @@ public class ArrayBackedList<E> implements IList<E>
     @Override
     public E get(int index)
     {
-        return (E)dataList[index];
+        return (E)this.dataList[index];
+    }
+
+
+    /**
+     * Sets an element in the array list
+     *
+     * @Warning This can go out of bounds with bad input
+     *
+     * @param index of desired element
+     * @return element of a specific index
+     */
+    public void set(int index, E o)
+    {
+        this.dataList[index] = o;
+    }
+
+
+    /**
+     * Swaps two elements in the list by their index
+     *
+     * @param index1 index of first element
+     * @param index2 index of second element
+     */
+    public void swap(int index1, int index2)
+    {
+        Object temp = this.dataList[index1];
+        this.dataList[index1] = dataList[index2];
+        this.dataList[index2] = temp;
+    }
+
+
+    /**
+     * Creates a string representation of the list.
+     *
+     * @return string corresponding to the list
+     */
+    public String toString()
+    {
+        String s = "";
+        for(int i = 0; i < this.currentSize; i++)
+        {
+            s+= this.dataList[i] + ", ";
+        }
+        return s;
     }
 }

@@ -7,6 +7,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+
 /**
  * JUnit tests for {@link ArrayBackedList}
  *
@@ -91,6 +92,7 @@ public class ArrayListTest
         assertFalse(list.contains(44.9));
         assertTrue(list.contains(13.0));
     }
+
 
     /**
      * Tests linked deletion based on element
