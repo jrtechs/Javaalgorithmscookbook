@@ -1,6 +1,8 @@
 package net.jrtechs.www.DataStructures.Lists.Queue;
 
 /**
+ * Defines behavior for a simple queue
+ *
  * @author Jeffery Russell 8-26-18
  */
 public interface IQueue<E>

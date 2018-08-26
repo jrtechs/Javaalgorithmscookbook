@@ -1,6 +1,7 @@
 package net.jrtechs.www.DataStructures.Lists.LinkedList;
 
 
+import net.jrtechs.www.DataStructures.Lists.IList;
 import net.jrtechs.www.DataStructures.Node;
 
 /**

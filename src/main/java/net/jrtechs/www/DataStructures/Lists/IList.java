@@ -1,4 +1,4 @@
-package net.jrtechs.www.DataStructures.Lists.LinkedList;
+package net.jrtechs.www.DataStructures.Lists;
 
 
 /**
