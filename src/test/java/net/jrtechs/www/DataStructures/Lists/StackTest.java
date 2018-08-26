@@ -7,6 +7,11 @@ import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
+/**
+ * JUnit tests for {@link Stack}
+ *
+ * @author Jeffery Russell 8-25-18
+ */
 public class StackTest
 {
 
