@@ -26,7 +26,7 @@ public class ArrayBackedList<E> implements IList<E>
     /** Array to store data elements in --
      * is an array of Objects since you can't
      * create a list of generics*/
-    private Object[] dataList;
+    protected Object[] dataList;
 
 
     /**
